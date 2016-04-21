@@ -16,24 +16,20 @@ function shinchoku(n){
 }
 
 function kanashimi(){
+    var ct = 0;
+    var word = [];
+    var res = ['進', '捗', 'な', 'い', 'で', 'す'];
     var tsurai = setInterval(function(){
-        var ct = 0;
-        var word = [];
-        var res = ['進', '捗', 'な', 'い', 'で', 'す'];
-        while(1){
-            var tmp = shinchoku(Math.floor(Math.random() * 6))
-            document.write(tmp);
-            word.push(tmp);
-            ct++;
-            if(word.length > 6)
-                word.shift();
-            if(word.join() == res.join()){
-                document.write("<br />");
-                break;
-
-            }
+        var tmp = shinchoku(Math.floor(Math.random() * 6))
+        document.write(tmp);
+        word.push(tmp);
+        ct++;
+        if(word.length > 6)
+            word.shift();
+        if(word.join() == res.join()){
+            document.write("<br />");
+            document.write("かなしみの" + ct + "文字<br />");
+            clearInterval(tsurai);
         }
-        document.write("かなしみの" + ct + "文字<br />");
-        clearInterval(tsurai);
-    }, 100);
+    }, 10);
 }
