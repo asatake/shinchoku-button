@@ -32,4 +32,4 @@ function kanashimi(){
             clearInterval(tsurai);
         }
     }, 10);
-}
+};
