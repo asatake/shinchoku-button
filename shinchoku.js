@@ -20,7 +20,7 @@ function kanashimi(){
     var word = [];
     var res = ['進', '捗', 'な', 'い', 'で', 'す'];
     var tsurai = setInterval(function(){
-        var tmp = shinchoku(Math.floor(Math.random() * 6))
+        var tmp = shinchoku(Math.floor(Math.random() * 6));
         document.write(tmp);
         word.push(tmp);
         ct++;
