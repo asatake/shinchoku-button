@@ -31,5 +31,5 @@ function kanashimi(){
             document.write("かなしみの" + ct + "文字<br />");
             clearInterval(tsurai);
         }
-    }, 10);
+    }, 30);
 };
