@@ -19,7 +19,7 @@ function kanashimi(){
     var ct = 0;
     var word = [];
     var res = ['進', '捗', 'な', 'い', 'で', 'す'];
-    var tsurai = setInterval(null, function(){
+    var tsurai = setInterval(function(){
         var tmp = shinchoku(Math.floor(Math.random() * 6))
         document.write(tmp);
         word.push(tmp);
@@ -31,5 +31,5 @@ function kanashimi(){
             document.write("かなしみの" + ct + "文字<br />");
             clearInterval(tsurai);
         }
-    }, 30);
+    }, 100);
 };
